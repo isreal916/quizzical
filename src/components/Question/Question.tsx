@@ -45,7 +45,7 @@ export function Question({ prop = data }: QuestionProps) {
   }
   return (
     <div className="flex flex-col border-b-2 border-blue-slate-500 border-solid w-[100%]   z-10 p-5 m-[1px]">
-      <h1 className="text-[#293264] mb-[5px] w-[420px] font-mono font-[16px] font-bold m-0 ">
+      <h1 className="text-[#293264] mb-[5px] w-[420px] font-[Karla] font-[16px] font-bold line-h-6 ">
        { he.decode(prop.question)}
 
       </h1>
