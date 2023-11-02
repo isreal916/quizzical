@@ -1,6 +1,6 @@
 // import  './Home.scss';
 interface homeProps {
-  startQuiz:Function
+  startQuiz:() => void
 }
 export function Home({startQuiz}:homeProps) {
   
