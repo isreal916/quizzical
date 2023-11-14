@@ -38,7 +38,7 @@ function App() {
   };
   return (
     <>
-      <div className="flex bg-slate-50 w-screen h-screen overflow-hidden    ">
+      <div className="flex bg-slate-50 w-screen h-screen overflow-hidden">
         <div className="bg-[url('./blob.svg')] w-[100px] h-[100px] bg-no-repeat fixed right-0 -z-5  "></div>
         <div className="bg-[url('./blob-2.svg')] w-[100px] h-[100px] bg-no-repeat fixed bottom-0 -z-4  "></div>
 
@@ -74,7 +74,9 @@ function App() {
             </div>
           </div>
         ) : (
+          <div className="flex m-auto">
           <Home startQuiz={startQuiz} />
+          </div>
         )}
       </div>
     </>
