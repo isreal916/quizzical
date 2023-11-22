@@ -6,7 +6,7 @@ export function Home({startQuiz}:homeProps) {
   
   return (
     
-      <div className="w-[200px] h-[200px]">
+      <div className="w-[200px] h-[200px] ">
         <h1 className="text-[31.25px] text-[#293264] font-mono text-center">
           Quizzical
         </h1>

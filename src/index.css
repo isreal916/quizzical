@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body{
+
+display:flex;
+height:100vh;
+width:100%;
+align-items: center;
+justify-content:center;
+background: url('./assets/blob.svg') no-repeat right top, url('./assets/blob-2.svg') no-repeat left bottom ;
+}

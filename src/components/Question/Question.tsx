@@ -1,8 +1,8 @@
 import React from "react";
-import he from 'he';
+import he from "he";
 import { shuffleArray } from "../../utils/shuffle";
 const data = {
-  id:1,
+  id: 1,
   category: "Science & Nature",
   type: "multiple",
   difficulty: "easy",
@@ -13,7 +13,7 @@ const data = {
 
 export interface QuestionProps {
   prop?: {
-    id: number,
+    id: number;
     category: string;
     type: string;
     difficulty: string;
@@ -25,29 +25,24 @@ export interface QuestionProps {
 
 export function Question({ prop = data }: QuestionProps) {
   const option = [...prop.incorrect_answers, prop.correct_answer];
-  shuffleArray(option)
+  shuffleArray(option);
   function Clicks(e: React.MouseEvent<HTMLButtonElement>): void {
-    
     const elements = document.getElementsByClassName(prop.id);
     for (let i = 0; i < elements.length; i++) {
       const element = elements[i];
       element.classList.remove("bg-violet-200");
-    element.classList.remove("choosed");
-    element.classList.remove("border-none");
-
-
+      element.classList.remove("choosed");
+      element.classList.remove("border-none");
     }
-        e.target.classList.add("border-none");
+    e.target.classList.add("border-none");
 
     e.target.classList.add("bg-violet-200");
-        e.target.classList.add("choosed");
-
+    e.target.classList.add("choosed");
   }
   return (
     <div className="flex flex-col border-b-2 border-blue-slate-500 border-solid w-[100%]   z-10 p-5 m-[1px]">
       <h1 className="text-[#293264] mb-[5px] w-[420px] font-[Karla] font-[16px] font-bold line-h-6 ">
-       { he.decode(prop.question)}
-
+        {he.decode(prop.question)}
       </h1>
       <div className="flex">
         {option.map((option) => {
@@ -58,13 +53,11 @@ export function Question({ prop = data }: QuestionProps) {
               onClick={Clicks}
               data-id={prop.id}
             >
-             {option}
+              {option}
             </button>
           );
         })}
       </div>
-      
     </div>
-    
   );
 }

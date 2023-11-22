@@ -38,12 +38,11 @@ function App() {
   };
   return (
     <>
-      <div className="flex bg-slate-50 w-screen h-screen overflow-hidden">
-        <div className="bg-[url('./blob.svg')] w-[100px] h-[100px] bg-no-repeat fixed right-0 -z-5  "></div>
-        <div className="bg-[url('./blob-2.svg')] w-[100px] h-[100px] bg-no-repeat fixed bottom-0 -z-4  "></div>
+      <div className="flex bg-slate-50 w-screen h-screen overflow-hidden main-container">
+       
 
         {startquiz ? (
-          <div className="flex flex-col m-auto    ">
+          <div className="flex flex-col m-auto">
             {data &&
               data.results.map((data) => {
                 return <Question key={data.id} prop={data} />;
@@ -74,7 +73,7 @@ function App() {
             </div>
           </div>
         ) : (
-          <div className="flex m-auto">
+          <div className="flex ">
           <Home startQuiz={startQuiz} />
           </div>
         )}
